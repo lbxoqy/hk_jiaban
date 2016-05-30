@@ -27,12 +27,18 @@ if (isset( $_POST['morningtime'] ))
  {
 	$username = sanitizeString ($_SESSION ['user']);
 	$morningtime = sanitizeString ($_POST ['morningtime']);
+<<<<<<< HEAD
 	$hometime = sanitizeString($_POST['morningtime']);
+=======
+>>>>>>> da950c629c7ca9aebe122e5154d1ea3eb671261d
 	
 	// 判断加班时间是否有值
 	if (empty($hometime)){
 		$hometime = date('Y-m-d H:i:s',time());
+<<<<<<< HEAD
 		echo "自动填充时间";
+=======
+>>>>>>> da950c629c7ca9aebe122e5154d1ea3eb671261d
 	}
 	$comptime = (strtotime($hometime) - strtotime($morningtime))/86400*24 - 1.5;// 总工作时间小时制
 	$expense = sanitizeString ( $_POST ['expense'] );
@@ -91,7 +97,11 @@ echo <<<END
       <label class="control-label" for="hometime">下班打卡时间: </label>
 	    <div class="controls">
 		<input type="text" id="hometime" name="hometime" class="input-xlarge" id="d413" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />
+<<<<<<< HEAD
         <p > <div id="showDate">默认时间:</div></p>
+=======
+        <p > <div id="showDate">默认时间:$date</div></p>
+>>>>>>> da950c629c7ca9aebe122e5154d1ea3eb671261d
       </div>
 	 </div>
  
