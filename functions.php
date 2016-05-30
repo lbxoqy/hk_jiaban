@@ -3,7 +3,7 @@ $dbhost  = 'localhost';    // Unlikely to require changing
 $dbname  = 'mysms';       // Modify these...
 $dbuser  = 'root';   // ...variables according
 $dbpass  = 'hk@test';   // ...to your installation
-$appname = "Bruce博客管理系统"; // ...and preference   
+$appname = "Bruce博客管理系统"; // ...and preference       
 
 mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
 mysql_select_db($dbname) or die(mysql_error());
